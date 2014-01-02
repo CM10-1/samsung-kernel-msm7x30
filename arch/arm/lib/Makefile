@@ -7,7 +7,6 @@
 lib-y		:= backtrace.o changebit.o csumipv6.o csumpartial.o   \
 		   csumpartialcopy.o csumpartialcopyuser.o clearbit.o \
 		   delay.o findbit.o memchr.o						\
-		   strncpy_from_user.o strnlen_user.o                 \
 
 # Build memcpy and memmove only if GLibC versions are not used
 ifneq ($(CONFIG_ARM_USE_GLIBC_MEMCOPY),y)
