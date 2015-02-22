@@ -160,10 +160,9 @@ config ARM_TICKET_LOCKS
 
 config RWSEM_GENERIC_SPINLOCK
 	bool
-	default y
 
 config RWSEM_XCHGADD_ALGORITHM
-	bool
+	def_bool y
 
 config ARCH_HAS_ILOG2_U32
 	bool
@@ -2064,6 +2063,14 @@ config CP_ACCESS
 	  interface. Read and write to CP registers from userspace
 	  through sysfs interface. A sys file (cp_rw) will be created under
 	  /sys/devices/cpaccess/cpaccess0.
+
+	  If unsure, say N.
+
+config ARM_USE_GLIBC_MEMCOPY
+	bool "Use the GLibC versions of memcpy and memmove"
+	help
+	  Allows to use the GLibC versions of memcpy and memmove to improve
+	  the performance of some routines.
 
 	  If unsure, say N.
 
